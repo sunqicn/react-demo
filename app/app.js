@@ -2,10 +2,11 @@
 * @Author: SumQI
 * @Date:   2018-01-18 17:14:00
 * @Last Modified by:   SumQI
-* @Last Modified time: 2018-01-18 18:52:46
+* @Last Modified time: 2018-01-18 20:38:37
 */
 
 import React from "react";
+import "./app.less";
 
 //组件的名字必须大写开头
 class Box extends React.Component {

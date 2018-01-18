@@ -1,0 +1,11 @@
+body {
+  background-color: #666;
+}
+.app-con {
+  width: 500px;
+  height: 200px;
+  background: red;
+}
+.app-con h1 {
+  color: #fff;
+}
