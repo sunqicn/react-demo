@@ -1,0 +1,59 @@
+/*
+* @Author: qi
+* @Date:   2016-08-21 23:34:14
+* @Last Modified by:   SunQi
+* @Last Modified time: 2017-12-26 20:31:56
+*/
+/*css初始化 begin*/
+body,div,p,h1,h2,h3,h4,h5,h6,ul,dl,ol,li,img,input,dt,dd {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+img,input {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	outline-style: none;
+}
+
+ul,dl,ol,dt,dd {
+	list-style: none;
+}
+a {
+	color: #B0B0B0;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF6700;
+}
+body {
+	background: #F5F5F5;
+}
+
+.clearfix:after{
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix {
+	zoom:1;
+}
+
+/*css初始化 end*/
+
+/*公共类*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+.b {
+	font-weight: 700;
+}

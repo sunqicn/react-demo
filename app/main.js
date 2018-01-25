@@ -1,18 +1,19 @@
-import React from "react";
-//使用export暴露方法可以使用{}枚举。
-import {render} from "react-dom"; 
-//使用default暴露的方法不能使用{}枚举。
+/*
+* @Author: SumQI
+* @Date:   2018-01-19 15:47:38
+* @Last Modified by:   SumQI
+* @Last Modified time: 2018-01-25 17:16:58
+*/
+import React from 'react';
+import {render} from 'react-dom';
 
-//加载样式
-import "./index.less";
+import FootList from "./components/Footer/footList.js"
+import Myajax from "./components/Other/ajax.js"
 
-//加载app.js中的Box 组件
-import Box from "./app.js"
-//挂在这个组件
 render(
 	<div>
-		<Box />
-		<Box />
+		<FootList />
+		<Myajax />
 	</div>,
-	document.getElementById('box')
-)
+	document.getElementById('root')
+	)

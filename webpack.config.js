@@ -2,7 +2,7 @@
  * @Author: SunQi
  * @Date:   2018-01-12 15:34:32
  * @Last Modified by:   SumQI
- * @Last Modified time: 2018-01-18 21:19:08
+ * @Last Modified time: 2018-01-25 18:22:07
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -63,7 +63,7 @@ module.exports = {
     //生成HTML文件
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './index.html',
+      template: './app/index.html',
     }),
     //提取页面中的less，生成单独的文件并转换成css。
     new ExtractTextPlugin({
@@ -74,6 +74,13 @@ module.exports = {
     }),
     //对代码进行打包压缩
     new webpack.optimize.UglifyJsPlugin({}),
+    new webpack.HotModuleReplacementPlugin()
 
-  ]
+  ],
+  devServer:{
+      contentBase: path.join(__dirname, "dist"),
+      compress: true,
+      port: 9000,
+      hot:true
+     }
 };
