@@ -2,7 +2,7 @@
  * @Author: SunQi
  * @Date:   2018-01-12 15:34:32
  * @Last Modified by:   SumQI
- * @Last Modified time: 2018-01-25 18:22:07
+ * @Last Modified time: 2018-03-03 16:10:33
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -35,7 +35,7 @@ module.exports = {
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         //如果需要，可以在 less-loader 之前将 resolve-url-loader 链接进来
-        use: ['css-loader', 'less-loader']
+        use: ['css-loader?modules', 'less-loader']
       })
     },{
         test:/\.(jpg|jpeg)/,
@@ -74,13 +74,13 @@ module.exports = {
     }),
     //对代码进行打包压缩
     new webpack.optimize.UglifyJsPlugin({}),
-    new webpack.HotModuleReplacementPlugin()
+    // new webpack.HotModuleReplacementPlugin()
 
   ],
   devServer:{
       contentBase: path.join(__dirname, "dist"),
       compress: true,
       port: 9000,
-      hot:true
+      hot:false
      }
 };
